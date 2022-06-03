@@ -1,4 +1,3 @@
-
 " INITIALIZING
 :set number
 :set autoindent
@@ -9,18 +8,19 @@
 :set mouse=a
 :set encoding=UTF-8
 
-
 " PLUGINS
 call plug#begin()
 
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
-Plug 'https://github.com/vim-airline/vim-airline'
+"Plug 'https://github.com/preservim/nerdtree' " NerdTree
+"Plug 'https://github.com/vim-airline/vim-airline'
 "Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
-Plug 'https://github.com/cohama/lexima.vim' " Auto close '' () {} [] and such
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'https://github.com/neovim/nvim-lspconfig'
+"Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
+"Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
+"Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
+"Plug 'https://github.com/cohama/lexima.vim' " Auto close '' () {} [] and such
 
 call plug#end()
 
@@ -33,7 +33,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 " Ctrl + S saves file
 nmap <c-s> :w<CR>
-imap <c-s> <ESC>:w<CR>i
+imap <c-s> <ESC>:w<CR>i<Right>
 
 " Ctrl + Q closes file
 nmap <c-q> :q<CR>
@@ -56,11 +56,11 @@ imap <S-Left> <Esc>v<Left>
 imap <S-Right> <Esc>v<Right>
 
 " copy, pasting and cutting shotcuts
-vmap <C-c> y<Esc>i
-vmap <C-x> d<Esc>i
-map <C-v> pi
-imap <C-v> <Esc>pi
-imap <C-z> <Esc>ui
+"vmap <C-c> y<Esc>i
+"vmap <C-x> d<Esc>i
+"map <C-v> pi
+"imap <C-v> <Esc>pi
+"imap <C-z> <Esc>ui
 
 " Toggling Tagbar
 nmap <F8> :TagbarToggle<CR>
