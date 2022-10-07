@@ -12,24 +12,27 @@
 call plug#begin()
 
 "Plug 'https://github.com/preservim/nerdtree' " NerdTree
-"Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline'
 "Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'https://github.com/neovim/nvim-lspconfig'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 "Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 "Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-"Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
-"Plug 'https://github.com/cohama/lexima.vim' " Auto close '' () {} [] and such
+Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
+Plug 'https://github.com/cohama/lexima.vim' " Auto close '' () {} [] and such
 
 call plug#end()
 
+" THEME
 
-"	REMAPS
 :colorscheme jellybeans
 
 
-nnoremap <C-t> :NERDTreeToggle<CR>
+"	REMAPS
 
 " Ctrl + S saves file
 nmap <c-s> :w<CR>

@@ -1,3 +1,6 @@
 [user]
 	email = 55817197+DougHigashi@users.noreply.github.com 
 	name = Doug Higashi
+[safe]
+	directory = /home/doug/xpadneo
+	directory = /usr/src/xpad-0.4
