@@ -1,3 +1,7 @@
 [user]
-	email = 55817197+DougHigashi@users.noreply.github.com 
+	email = 55817197+DougHigashi@users.noreply.github.com
 	name = Doug Higashi
+[init]
+	defaultBranch = main
+[includeIf "gitdir:/mnt/stuff/Projects/Js/ME/"]
+        path = /mnt/stuff/Projects/Js/ME/.gitconfig-ME
