@@ -12,3 +12,9 @@ And to view the top connection attempts by IP
 ```
 journalctl -k | grep "SSH_LIMIT" | awk -F"SRC=" '{print $2}' | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 10
 ```
+
+## Dumping journalctl to online log sharing site
+
+```sh
+sudo journalctl -b | curl -F 'file=@-' 0x0.st
+```
